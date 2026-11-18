@@ -1,0 +1,12 @@
+{
+  "title": "Earthquake catalogue of Northeast India, 2013-2025 (raw and Mwg-homogenised), with analysis code",
+  "description": "Data and code accompanying: Pallavi P., Joshi S., Chauhan V., Saurabh P. A Permissioned-Blockchain Framework for Verifiable, Reproducible Earthquake Catalogues: Design, Integrity Guarantees, and Application to Seismic Hazard in Northeast India. The archive contains the 1,322-event ANSS ComCat catalogue for 2013-2025 (20-30 N, 87-98 E), the catalogue homogenised to the seismic moment magnitude Mwg with the conversion and declustering result for each event, and the Python scripts that reproduce all catalogue statistics and Monte Carlo experiments of the paper. Source data: U.S. Geological Survey (2017), https://doi.org/10.5066/F7MS3QZH.",
+  "creators": [
+    {"name": "Pallavi, Pallavi", "affiliation": "Department of Computer Science and Engineering, Manipal University Jaipur, India"},
+    {"name": "Joshi, Sandeep", "affiliation": "Department of Computer Science and Engineering, Manipal University Jaipur, India"},
+    {"name": "Chauhan, Vaishali", "affiliation": "Department of Computer Science and Engineering, Manipal University Jaipur, India"},
+    {"name": "Saurabh, Praneet", "affiliation": "Department of Computer Science and Engineering, Manipal University Jaipur, India"}
+  ],
+  "license": "MIT",
+  "keywords": ["earthquake catalogue", "Northeast India", "magnitude conversion", "seismic moment magnitude", "Gutenberg-Richter", "declustering", "reproducibility"]
+}

@@ -8,10 +8,11 @@ Data and code accompanying:
 
 | Path | Description |
 |---|---|
-| `data/ComCat_NEIndia_2013-2025_raw.csv` | All 1,322 events of the ANSS Comprehensive Earthquake Catalog (ComCat) of the U.S. Geological Survey for 2013-2025, 20-30 N, 87-98 E, M >= 2.5, exactly as returned by the query below |
-| `data/NEIndia_2013-2025_Mwg_homogenised.csv` | The same events with the homogenised magnitude Mwg, the conversion applied, the calibration-range status and the declustering result |
-| `code/catalogue_analysis.py` | Magnitude homogenisation, declustering, completeness, Gutenberg-Richter parameters and all sensitivity analyses (Sections 3.8-3.10, 4.2-4.3 and 4.7-4.9 of the paper) |
-| `code/montecarlo.py` | Monte Carlo experiments comparing the orthogonal fit, the GOR1 relation and SLR (Sections 3.7 and 4.4-4.6) |
+| `ComCat_NEIndia_2013-2025_raw.csv` | All 1,322 events of the ANSS Comprehensive Earthquake Catalog (ComCat) of the U.S. Geological Survey for 2013-2025, 20-30 N, 87-98 E, M >= 2.5, exactly as returned by the query below |
+| `NEIndia_2013-2025_Mwg_homogenised.csv` | The same events with the homogenised magnitude Mwg, the conversion applied, the calibration-range status and the declustering result |
+| `catalogue_analysis.py` | Magnitude homogenisation, declustering, completeness, Gutenberg-Richter parameters and all sensitivity analyses (Sections 3.8-3.10, 4.2-4.3 and 4.7-4.9 of the paper) |
+| `montecarlo.py` | Monte Carlo experiments comparing the orthogonal fit, the GOR1 relation and SLR (Sections 3.7 and 4.4-4.6) |
+| `requirements.txt` | Python packages needed to run the scripts |
 
 ## Source query
 
@@ -37,9 +38,10 @@ Please cite the source catalogue as: U.S. Geological Survey (2017) Advanced Nati
 Requires Python 3.9 or later with `numpy`, `pandas` and `matplotlib`.
 
 ```
-pip install numpy pandas matplotlib
-python code/catalogue_analysis.py data/ComCat_NEIndia_2013-2025_raw.csv results/
-python code/montecarlo.py results/
+pip install -r requirements.txt
+mkdir results
+python catalogue_analysis.py ComCat_NEIndia_2013-2025_raw.csv results
+python montecarlo.py results
 ```
 
 `catalogue_analysis.py` writes `results.json` (Tables 6 and 7 of the paper), `fmd.png` (Fig. 8) and the homogenised catalogue.
